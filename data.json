@@ -1,0 +1,14 @@
+[
+  {
+    "title": "A",
+    "author": "A",
+    "year": 1999,
+    "read": false
+  },
+  {
+    "title": "B",
+    "author": "B",
+    "year": 2000,
+    "read": false
+  }
+]

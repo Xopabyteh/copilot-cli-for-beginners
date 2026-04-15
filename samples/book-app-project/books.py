@@ -1,6 +1,7 @@
 import json
 from dataclasses import dataclass, asdict
 from typing import List, Optional
+from typing import Any
 
 DATA_FILE = "data.json"
 
@@ -69,4 +70,27 @@ class BookCollection:
 
     def find_by_author(self, author: str) -> List[Book]:
         """Find all books by a given author."""
-        return [b for b in self.books if b.author.lower() == author.lower()]
+        return [b for b in self.books if b.author.lower() == author.lower()]   
+   
+    def get_book_stats(books: list[Any]) -> dict[str, Any]:
+        """
+        Returns stats for a list of book-like objects with .year and .read attributes.
+        """
+        total = len(books)
+        read_count = sum(1 for book in books if getattr(book, "read", False))
+        unread_count = total - read_count
+    
+        if books:
+            oldest = min(books, key=lambda b: getattr(b, "year", float("inf")))
+            newest = max(books, key=lambda b: getattr(b, "year", float("-inf")))
+        else:
+            oldest = None
+            newest = None
+    
+        return {
+            "total_count": total,
+            "read_count": read_count,
+            "unread_count": unread_count,
+            "oldest_book": oldest,
+            "newest_book": newest,
+        }

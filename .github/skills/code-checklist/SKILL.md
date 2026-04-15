@@ -1,4 +1,4 @@
----
+/---
 name: code-checklist
 description: Team code quality checklist - use for checking Python code quality, bugs, security issues, and best practices
 ---
