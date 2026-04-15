@@ -1,3 +1,18 @@
+## 🧭 Fork Progress Snapshot
+
+Based on the last two commits after the fork, the learner has likely completed **Chapters 01 and 02** (setup/first steps and context/conversations).
+
+Recent changes introduced:
+
+- Updated the Python book app CLI with input validation, stricter year checks, and handler dispatch in [samples/book-app-project/book_app.py](samples/book-app-project/book_app.py)
+- Added input-validation helpers and user prompts in [samples/book-app-project/utils.py](samples/book-app-project/utils.py)
+- Added pytest coverage for CLI utilities in [samples/book-app-project/tests/test_utils.py](samples/book-app-project/tests/test_utils.py)
+- Added a book stats helper in [samples/book-app-project/books.py](samples/book-app-project/books.py)
+- Added a review note file in [samples/book-app-project/book_app.py.review.md](samples/book-app-project/book_app.py.review.md)
+- Added sample data in [data.json](data.json)
+- Fixed the YAML front matter in [.github/skills/code-checklist/SKILL.md](.github/skills/code-checklist/SKILL.md)
+
+
 ![GitHub Copilot CLI for Beginners](./images/copilot-banner.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)&ensp;
